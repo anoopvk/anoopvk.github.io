@@ -1,0 +1,222 @@
+<html>
+<head>
+  <title>Resume | Anoop V K</title>
+  <meta charset="UTF-8"><!--[if IE]><![endif]-->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta property="og:title" content="Resume | Anoop V K" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hey, I'm Anoop",
+      subtext: "Software Engineer based in Bangalore, India",
+      jobStatus: "Software Engineer @ RCKR Softwares",
+      githubURL: 'https://github.com/anoopvk',
+      linkedinURL: 'https://www.linkedin.com/in/anoop-v-k/',
+      resumeURL: 'https://anoopvk.github.io/files/resume.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">
+                    I am a Full-Stack Software Engineer with over 3 years of experience, specializing in building robust web applications. I am skilled at rapidly learning and applying new technologies and excel in understanding system requirements, designing architecture, and managing the development lifecycle, including testing/QA and production environments. Recognized for mentoring and training junior team members, effective client interactions, and rapid issue resolution.
+                  </p>
+                  <p className="intro-p">I am committed to continuous learning and enthusiastic about embracing new technologies to contribute to technical excellence in diverse tech environments.</p>
+                  
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>C#, JavaScript, TypeScript,
+                      Python, SQL</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>NET Framework / .NET Core,
+                      Angular, RxJS, Hangfire,
+                      Cordova, Apache Parquet,
+                      OpenTelemetry, LangChain 
+                      </span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Docker, Docker Compose,
+                      Kubernetes (basic), Redis,
+                      Firebase, MS SQL, Azure, OAuth
+                      2.0 / OIDC, Git, PowerShell
+                      scripting</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="duration">2017 — 2021</div>
+                  <div className="university"><a href="https://www.mesce.ac.in/" target="_blank">MES College of Engineering</a></div>
+                  <div className="college"><a href="" target="_blank">Bachelor of Technology in
+                    Computer Science</a></div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://rckr.com/" target="_blank">RCKR Software</a>
+                      <div className="duration">July 2021 &mdash; Present</div>
+                    </div>
+                    <div className="title">Software Engineer</div>
+                    <ul className="description">
+                      <li>
+                        Implemented and deployed a Dockerized resource server in Azure with multi-tenant authorization and authentication using OAuth 2.0. Integrated OpenTelemetry for telemetry, connected to Datadog
+                      </li>
+                      <li>
+                        Architected a microservice to generate secure, asynchronous PDF exports of patient data, deployable as an Azure Functions for scalability
+                      </li>
+                      <li>
+                        Created a cost-effective audit log archiving tool using Apache Parquet, reducing client costs
+                      </li>
+                      <li>
+                        Architected and developed an end-to-end widget for storing insurance information, enhancing user accessibility for 3 million users.
+                      </li>
+                      <li>
+                        Integrated microbiology data in FHIR standard, improving data management of blood test results. 
+                      </li>
+                      <li>
+                        Developed visually engaging graphs with D3.js, enhancing data
+                        analysis and decision-making. 
+                      </li>
+                      <li>
+                        Integrated health devices like Fitbit, Garmin, and Omron, improving user experience and data synchronization. 
+                      </li>
+                      <li>
+                        Led deployment of Android and iOS applications, enhancing system accessibility and user engagement.</li>
+                      <li>
+                        Mentored and trained junior team members, fostering a collaborative and skilled development team. 
+                      </li>
+                      <li>
+                        Optimized deployment processes with PowerShell scripting, enhancing system efficiency. 
+                      </li>
+                      <li>
+                        Implemented internal API endpoints for streamlined testing, significantly expediting access to test user data.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="" target="_blank">Crevice</a>
+                      <div className="duration">2020 &mdash; 2021</div>
+                    </div>
+                    <div className="title">Software Developer Intern</div>
+                    <ul className="description">
+                      <li> Developed web applications using React.js, gaining hands-on
+                        experience in front-end development. 
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <div className="project-title">Ai SQL Chatbot</div>
+                    <p className="project-desc">Chatbot that dynamically creates and executes SQL
+                      queries on a relational database with the capability to switch between
+                      different LLMs for tailored responses and solutions.</p>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title">Social Distancing Detector</div>
+                    <p className="project-desc">A system that uses surveillance cameras
+                      to monitor and alert people to maintain safe distances, built with
+                      Python, OpenCV, threading, and Firebase</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="" target="_blank">QuickSqlServerSnippets VSCode Extension</a>
+                    <p className="project-desc"> A VSCode extension for managing and executing SQL
+                      queries on SQL Server databases directly from the editor. It uses the
+                      Command Palette to save, run, and delete queries through a simple
+                      interface. Built with TypeScript and NodeJS. 
+                      </p>
+                  </div>
+                 
+                </div>
+              </div>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+</html>
